@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: my-app
@@ -13,8 +13,8 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: my-app-v1
-        image: my-app:v1
+      - name: my-app-v2
+        image: my-app:v2
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 3001
